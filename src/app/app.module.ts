@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CustomMaterialModule } from './custom-material.module';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ThreadsComponent } from './components/threads/threads.component';
@@ -16,12 +16,14 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { NewAnswerComponent } from './components/new-answer/new-answer.component';
 import { NewThreadComponent } from './components/new-thread/new-thread.component';
+import { UserManagerComponent } from './components/user-manager/user-manager.component';
 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'threads', pathMatch: 'full'},
   { path: 'threads', component: ThreadsComponent},
-  { path: 'thread', component: ThreadComponent}
+  { path: 'thread', component: ThreadComponent},
+  { path: 'user', component: UserManagerComponent },
 ];
 
 
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     SignInComponent,
     SignUpComponent,
     NewThreadComponent,
-    NewAnswerComponent
+    NewAnswerComponent,
+    UserManagerComponent
   ],
   imports: [
     BrowserModule,

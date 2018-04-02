@@ -12,9 +12,6 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit() {
   }
-  confirm(): void {
-    this.dialogRef.close('Confirm');
-  }
 
   close(): void {
     this.dialogRef.close();

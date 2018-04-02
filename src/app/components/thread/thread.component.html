@@ -3,12 +3,12 @@
   <div class="container">
 
     <div class="vote">
-      <i (click)="upVoteQ()" class="material-icons">keyboard_arrow_up</i>
+      <i (click)="upVoteQ()" class="material-icons hand">keyboard_arrow_up</i>
       <p>50</p>
       <br>
-      <i (click)="downVoteQ()" class="material-icons">keyboard_arrow_down</i>
+      <i (click)="downVoteQ()" class="material-icons hand">keyboard_arrow_down</i>
       <br>
-      <p><span matTooltip="Give Answer!"><i class="material-icons" (click)="addAnswer()">library_add</i></span></p>
+      <p><span matTooltip="Know solution, Give an answer!"><i class="material-icons hand" (click)="addAnswer()">library_add</i></span></p>
     </div>
 
     <div class="question-container">
@@ -36,7 +36,7 @@
         <div class="new-comment">
           <textarea name="" id=""></textarea>
           <div>
-            <mat-chip (click)="addResponse()" >Replay</mat-chip>
+            <button (click)="addResponse()" mat-raised-button color="primary">Replay</button>
           </div>
         </div>
       </div>
@@ -81,10 +81,10 @@
   <hr>
   <div class="container">
     <div class="vote">
-      <i (click)="upVoteA()" class="material-icons">keyboard_arrow_up</i>
+      <i (click)="upVoteA()" class="material-icons hand">keyboard_arrow_up</i>
       <p>50</p>
       <br>
-      <i (click)="downVoteA()"class="material-icons">keyboard_arrow_down</i>
+      <i (click)="downVoteA()"class="material-icons hand">keyboard_arrow_down</i>
     </div>
     <div class="answer-container">
       <div class="answer">
@@ -110,7 +110,7 @@
         <div class="new-comment">
           <textarea name="" id=""></textarea>
           <div>
-            <mat-chip (click)="addComment()">Replay</mat-chip>
+            <button (click)="addComment()" mat-raised-button color="primary">Replay</button>
           </div>
         </div>
       </div>
@@ -167,6 +167,7 @@
       </div>
     </div>
   </div>
-
-
-</div>
+  <app-new-answer>
+    
+  </app-new-answer>
+  </div>

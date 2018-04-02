@@ -12,7 +12,7 @@ export class ThreadComponent implements OnInit {
   ngOnInit() {
   }
   addAnswer() {
-    console.log('Add Answer');
+    alert('hello');
   }
   addResponse() {
     console.log('Add Response');

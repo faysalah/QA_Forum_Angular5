@@ -1,0 +1,5 @@
+.content{
+    max-width: 1150px;
+    margin: 0 auto;
+    min-height: calc(90.5vh - 50px);    
+}

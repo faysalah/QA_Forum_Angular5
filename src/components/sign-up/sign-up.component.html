@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="container-heading">
+    <span>User Login</span>
+    <span class="test" (click)="close()">
+      <i class="material-icons">close</i>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="l-form">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <div class="container">
+      <mat-form-field>
+        <input matInput type="email" ngModel #email=ngModel name="email" placeholder="Enter email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" ngModel #password=ngModel name="password" placeholder="Password">
+      </mat-form-field>
+      <button mat-raised-button color="primary">Login</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,172 @@
+<div class="thread-container">
+
+  <div class="container">
+
+    <div class="vote">
+      <i (click)="upVoteQ()" class="material-icons">keyboard_arrow_up</i>
+      <p>50</p>
+      <br>
+      <i (click)="downVoteQ()" class="material-icons">keyboard_arrow_down</i>
+      <br>
+      <p><span matTooltip="Give Answer!"><i class="material-icons" (click)="addAnswer()">library_add</i></span></p>
+    </div>
+
+    <div class="question-container">
+      <div class="question">
+        <div class="title">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione?
+        </div>
+        <div class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquid laborum consectetur deleniti quasi amet exercitationem
+          vero tenetur fuga minima totam blanditiis praesentium cumque cum nostrum dolorem, quibusdam tempora. Rem. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Labore aliquid laborum consectetur deleniti quasi amet exercitationem
+          vero tenetur fuga minima totam blanditiis praesentium cumque cum nostrum dolorem, quibusdam tempora. Rem.
+        </div>
+        <div class="info-footer">
+          <mat-chip-list>
+            <mat-chip>js</mat-chip>
+            <mat-chip>angular5</mat-chip>
+            <mat-chip>python</mat-chip>
+          </mat-chip-list>
+          <div>
+            <span>27,may,2017</span>
+            <span><i class="material-icons">account_circle</i> Faysal</span>
+          </div>
+        </div>
+        <div class="new-comment">
+          <textarea name="" id=""></textarea>
+          <div>
+            <mat-chip (click)="addResponse()" >Replay</mat-chip>
+          </div>
+        </div>
+      </div>
+
+      <div class="response">
+        <div class="response-item">
+          <div class="response-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero totam temporibus sit doloribus!
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27 may 2017</p>
+          </div>
+        </div>
+        <div class="response-item">
+          <div class="response-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero totam temporibus sit doloribus! Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Vero totam temporibus sit doloribus!
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27 may 2017</p>
+          </div>
+        </div>
+        <div class="response-item">
+          <div class="response-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero totam temporibus sit doloribus! Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Vero totam temporibus sit doloribus! Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Vero totam temporibus sit doloribus!
+          </div>
+          <div class="user">
+            <p>27 may 2017</p>
+            <i class="material-icons">account_circle</i> Faysal
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ANSWER-->
+  <hr>
+  <div class="container">
+    <div class="vote">
+      <i (click)="upVoteA()" class="material-icons">keyboard_arrow_up</i>
+      <p>50</p>
+      <br>
+      <i (click)="downVoteA()"class="material-icons">keyboard_arrow_down</i>
+    </div>
+    <div class="answer-container">
+      <div class="answer">
+        <div class="title">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, aliquam!
+        </div>
+        <div class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit optio fugiat accusamus! Aliquam consectetur ex natus, velit
+          magnam hic molestias placeat provident porro eum autem. Minus culpa suscipit ipsum placeat sunt nihil maxime, dolor
+          amet earum doloremque assumenda accusamus? Maxime corrupti ratione quibusdam culpa eaque, repellat libero distinctio
+          quis corporis. Magni vitae nemo laborum perferendis libero, illum eveniet, maxime ex fugiat dolorem assumenda sit.
+          Rerum minima fuga vero porro voluptatem velit pariatur ad dolore. Magni, repudiandae eos, minus dicta suscipit,
+          quas nemo ipsum libero porro quam soluta ipsa similique modi cupiditate! Quia consequuntur repellendus odio quisquam
+          libero voluptas facilis id?
+        </div>
+        <div class="info-footer">
+          <div>
+            <span>27 may 2017</span>
+            <span>
+              <i class="material-icons">account_circle</i>Faysal</span>
+          </div>
+        </div>
+        <div class="new-comment">
+          <textarea name="" id=""></textarea>
+          <div>
+            <mat-chip (click)="addComment()">Replay</mat-chip>
+          </div>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="comment-item">
+          <div class="comment-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27,may,2017</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat deserunt Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ipsam ipsum, at repellat deserunt
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27 may 2017</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat deserunt dolorum illo incidunt. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat deserunt dolorum illo incidunt. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat deserunt dolorum illo incidunt.
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27 may 2017</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat deserunt dolorum illo incidunt.
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27 may 2017</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum, at repellat deserunt dolorum illo incidunt.
+          </div>
+          <div class="user">
+            <i class="material-icons">account_circle</i> Faysal
+            <p>27 may 2017</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>

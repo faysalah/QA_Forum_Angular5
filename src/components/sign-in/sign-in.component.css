@@ -1,0 +1,29 @@
+.container-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container > * {
+  width: 100%;
+} 
+
+span:nth-child(2) > i{
+  vertical-align: middle;
+}
+span:nth-child(2) > i:hover{
+  background-color: #DD2C00;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.l-form{
+  max-width: 700px;
+  margin: 50px auto;
+}

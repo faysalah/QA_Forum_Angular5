@@ -1,0 +1,142 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.vote >
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 0;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+
+.vote > p {
+    font-size: 25px;
+    text-align: center;
+}
+.vote > i:nth-child(1){
+    vertical-align: top;
+    color:#1B5E20; 
+}
+.vote > i:nth-child(4){
+    color:#B71C1C; 
+    
+}
+.vote > i:nth-child(6) , .material-icons {
+    color: #212121;
+    font-size: 40px; 
+}
+
+
+.question > .title{
+    font-size: 26px;
+    font-weight: bolder;
+    color: #BF360C;
+}
+
+.question > .description{
+    margin: 5px;
+    line-height: 1;
+    text-align: justify;
+}
+.response, .comment{
+    margin:0 40px;  
+}
+
+.answer > .title{
+    font-size: 23px;
+    color:#212121;    ;
+    font-weight: bold;
+}
+.answer > .content{
+    margin: 5px;
+    color: #212121;
+    line-height: 1rem;
+    text-align: justify;
+}
+
+.comment-item, .response-item{
+    border-radius: 15px;
+    background: #F5F5F5;
+    margin: 2px 0;
+    font-size: 16px;
+    font-style: oblique;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 15px;
+    align-items: center;
+    color: #616161;
+}
+
+ .user > .material-icons{
+    font-size: 14px;
+    color:#424242;    
+}
+.user, p {
+    white-space: nowrap;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #BDBDBD;
+    text-align: center;
+ }
+hr{
+    margin: 2% 3%;
+}
+.info-footer{
+    margin: 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-comment{
+    margin: 7px 40px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.new-comment  textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding:5px;
+    border-radius: 15px;
+    flex: 4;
+}
+.new-comment div{
+    flex:1;
+    align-self: flex-end;
+}
+.new-comment mat-chip{
+    margin-left: 10px;
+}
+.new-comment textarea:focus {
+    outline: none !important;
+    border:1px solid #212121;
+    box-shadow: 0 0 10px #212121;  
+}
+.info-footer i {
+    vertical-align: sub;
+}
+.info-footer span { 
+    font-style: oblique;
+    color: #BDBDBD;
+    font-size: 13px;
+}
+.info-footer .material-icons {
+    font-size: 15px;
+    color: #424242;
+}
+
+@media only screen and (max-width: 767px) {
+    .response, .comment{
+        margin:0 15px;  
+    }
+}

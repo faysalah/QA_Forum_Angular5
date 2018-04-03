@@ -1,6 +1,8 @@
 import { Component, OnInit, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
 import { NewAnswerComponent } from '../new-answer/new-answer.component';
 import { ToastrService } from 'ngx-toastr';
+import { AppService } from '../../services/app.service';
+
 @Component({
   selector: 'app-thread',
   templateUrl: './thread.component.html',
@@ -10,10 +12,11 @@ export class ThreadComponent implements OnInit {
 
   @ViewChild('dynamicInsert', { read: ViewContainerRef }) dynamicInsert: ViewContainerRef;
   constructor(private componentFactoryResolver: ComponentFactoryResolver,
-    private toastr: ToastrService) {
+    private toastr: ToastrService, private appService: AppService) {
   }
 
   ngOnInit() {
+    this.appService.vartest = this.dynamicInsert;
   }
 
   addAnswer() {
@@ -21,27 +24,30 @@ export class ThreadComponent implements OnInit {
     this.dynamicInsert.clear();
     this.dynamicInsert.createComponent(componentFactory);
   }
-  answerInputClose() {
-    this.dynamicInsert.clear();
-  }
+
 
   addResponse() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.success('Hello world!', 'Add Response!');
   }
+
   addComment() {
-    console.log('Add Comment');
+    this.toastr.success('Hello world!', 'Add Comment!');
   }
+
   upVoteA() {
-    console.log('up vote Answer');
+    this.toastr.success('Hello world!', 'up vote Answer!');
   }
+
   downVoteA() {
-    console.log('down vote Answer');
+    this.toastr.success('Hello world!', 'down vote Answer!');
   }
+
   upVoteQ() {
-    console.log('up vote Question');
+    this.toastr.success('Hello world!', 'up vote Question!');
   }
+
   downVoteQ() {
-    console.log('down vote Question');
+    this.toastr.success('Hello world!', 'down vote Question!');
   }
 
 }

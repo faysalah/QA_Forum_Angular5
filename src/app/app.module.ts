@@ -19,7 +19,7 @@ import { NewAnswerComponent } from './components/new-answer/new-answer.component
 import { NewThreadComponent } from './components/new-thread/new-thread.component';
 import { UserManagerComponent } from './components/user-manager/user-manager.component';
 
-
+import { AppService } from './services/app.service';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'threads', pathMatch: 'full'},
   { path: 'threads', component: ThreadsComponent},
@@ -51,11 +51,10 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpModule,
     ToastrModule.forRoot({
-      closeButton: true,
-      preventDuplicates: true
+      closeButton: true
     })
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent],
   entryComponents: [
     SignInComponent,

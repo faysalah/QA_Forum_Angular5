@@ -32,3 +32,15 @@ hr {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+
+i{
+    vertical-align: middle;
+    float: right;
+}
+
+i:hover{
+    background-color: #DD2C00;
+    cursor: pointer;
+    vertical-align: middle;
+    float: right;   
+}

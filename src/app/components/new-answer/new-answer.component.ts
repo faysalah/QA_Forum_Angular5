@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-new-answer',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewAnswerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr: ToastrService, private appService: AppService) { }
 
   ngOnInit() {
-
   }
 
   close() {
-
+    this.appService.test();
+    this.toastr.error('Not Closed', 'want to close');
   }
 
   addAnswer() {

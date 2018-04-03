@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ComponentFactoryResolver, ViewChild, ViewContainerRef } from '@angular/core';
+import { NewAnswerComponent } from '../new-answer/new-answer.component';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-thread',
   templateUrl: './thread.component.html',
@@ -7,15 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreadComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('dynamicInsert', { read: ViewContainerRef }) dynamicInsert: ViewContainerRef;
+  constructor(private componentFactoryResolver: ComponentFactoryResolver,
+    private toastr: ToastrService) {
+  }
 
   ngOnInit() {
   }
+
   addAnswer() {
-    alert('hello');
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(NewAnswerComponent);
+    this.dynamicInsert.clear();
+    this.dynamicInsert.createComponent(componentFactory);
   }
+  answerInputClose() {
+    this.dynamicInsert.clear();
+  }
+
   addResponse() {
-    console.log('Add Response');
+    this.toastr.success('Hello world!', 'Toastr fun!');
   }
   addComment() {
     console.log('Add Comment');

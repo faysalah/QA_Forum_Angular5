@@ -10,6 +10,11 @@ export class NewAnswerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  close() {
+
   }
 
   addAnswer() {

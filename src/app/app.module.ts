@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CustomMaterialModule } from './custom-material.module';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -48,14 +49,19 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    ToastrModule.forRoot({
+      closeButton: true,
+      preventDuplicates: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
     SignInComponent,
     SignUpComponent,
-    NewThreadComponent
+    NewThreadComponent,
+    NewAnswerComponent
   ]
 })
 export class AppModule { }

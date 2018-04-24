@@ -2,21 +2,24 @@ import { Component, OnInit, ComponentFactoryResolver, ViewChild, ViewContainerRe
 import { NewAnswerComponent } from '../new-answer/new-answer.component';
 import { ToastrService } from 'ngx-toastr';
 import { AppService } from '../../services/app.service';
-
+import { ThreadService } from '../../services/thread.service';
+import { Thread } from '../../models/thread';
 @Component({
   selector: 'app-thread',
   templateUrl: './thread.component.html',
   styleUrls: ['./thread.component.css']
 })
 export class ThreadComponent implements OnInit {
-
+  thread: Thread;
   @ViewChild('dynamicInsert', { read: ViewContainerRef }) dynamicInsert: ViewContainerRef;
   constructor(private componentFactoryResolver: ComponentFactoryResolver,
-    private toastr: ToastrService, private appService: AppService) {
+    private toastr: ToastrService, private appService: AppService,
+     private threadService: ThreadService) {
   }
 
   ngOnInit() {
-    this.appService.vartest = this.dynamicInsert;
+    this.appService.answerInputRef = this.dynamicInsert;
+    this.thread = this.threadService.get_thread(1);
   }
 
   addAnswer() {
@@ -25,7 +28,6 @@ export class ThreadComponent implements OnInit {
     this.dynamicInsert.createComponent(componentFactory);
   }
 
-
   addResponse() {
     this.toastr.success('Hello world!', 'Add Response!');
   }
@@ -33,21 +35,23 @@ export class ThreadComponent implements OnInit {
   addComment() {
     this.toastr.success('Hello world!', 'Add Comment!');
   }
-
-  upVoteA() {
-    this.toastr.success('Hello world!', 'up vote Answer!');
-  }
-
-  downVoteA() {
-    this.toastr.success('Hello world!', 'down vote Answer!');
-  }
-
   upVoteQ() {
     this.toastr.success('Hello world!', 'up vote Question!');
+    this.threadService.questionUpVote(1);
   }
 
   downVoteQ() {
     this.toastr.success('Hello world!', 'down vote Question!');
+    this.threadService.questionDownVote(1);
   }
 
+  upVoteA() {
+    this.toastr.success('Hello world!', 'up vote Answer!');
+    this.threadService.answerUpVote(1);
+  }
+
+  downVoteA() {
+    this.toastr.success('Hello world!', 'down vote Answer!');
+    this.threadService.answerDownVote(1);
+  }
 }

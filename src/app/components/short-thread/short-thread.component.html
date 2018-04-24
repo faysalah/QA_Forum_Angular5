@@ -1,31 +1,27 @@
 <mat-card>
   <div class="thread-info">
     <ul>
-      <li>40</li>
+      <li>{{ short_thread.answered }}</li>
       <li>Answers</li>
-      <li>662</li>
+      <li>{{short_thread.votes}}</li>
       <li>Votes</li>
     </ul>
   </div>
   <div class="thread-content">
     <div class="thread-body" (click)="viewThread()">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam at?
+      {{short_thread.question}}
     </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores doloribus in eaque numquam esse eos accusantium assumenda
-      consequuntur alias sunt magnam impedit, rem sequi vitae, nulla, aspernatur laudantium nobis id?
-    </p>
+    <p>{{short_thread.question}}</p>
   </div>
     <div class="thread-footer">
       <mat-chip-list>
-        <mat-chip>JavaScript</mat-chip>
-        <mat-chip>React</mat-chip>
-        <mat-chip>Webpack</mat-chip>
-      </mat-chip-list>
-      <mat-chip-list class="test">
+        <mat-chip *ngFor="let tag of short_thread.tags">{{ tag }}</mat-chip>
+      </mat-chip-list>  
+      <mat-chip-list>
         <mat-chip>
-          <i class="material-icons">account_circle</i> Faysal</mat-chip>
+          <i class="material-icons">account_circle</i> {{short_thread.user.name}}
+        </mat-chip>
       </mat-chip-list>
     </div>
   </div>

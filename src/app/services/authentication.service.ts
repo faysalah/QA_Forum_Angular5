@@ -4,5 +4,18 @@ import { Injectable } from '@angular/core';
 export class AuthenticationService {
 
   constructor() { }
+  signUp() {
 
+  }
+
+  signIn() {
+
+  }
+
+  signOut() {
+
+  }
+
+  isAuthenticate() {
+  }
 }

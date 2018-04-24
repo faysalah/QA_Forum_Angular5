@@ -1,23 +1,27 @@
 <mat-tab-group>
-        <mat-tab label="Newest" (click)="onClick()">
-                <div *ngFor="let hero of heros">
-                    <app-short-thread></app-short-thread>
-                </div>
+        <mat-tab label="Newest">
+                <app-short-thread 
+                    *ngFor="let short_thread of short_threads" 
+                    [short_thread]="short_thread">
+                </app-short-thread>
         </mat-tab>
-        <mat-tab label="Unanswered" (click)="onClick()">
-                <div *ngFor="let hero of heros1">
-                        <app-short-thread></app-short-thread>
-                    </div>
+        <mat-tab label="Unanswered">
+                <app-short-thread 
+                *ngFor="let short_thread of short_threads" 
+                [short_thread]="short_thread">
+                </app-short-thread>
         </mat-tab>
-        <mat-tab label="Top Theads" (click)="viewThread()">
-                <div *ngFor="let hero of heros3">
-                        <app-short-thread></app-short-thread>
-                    </div>
+        <mat-tab label="Top Theads">
+                <app-short-thread 
+                *ngFor="let short_thread of short_threads" 
+                [short_thread]="short_thread">
+            </app-short-thread>
         </mat-tab>
         <mat-tab label="Most Voted">
-                <div *ngFor="let hero of heros4">
-                        <app-short-thread></app-short-thread>
-                    </div>
+                <app-short-thread 
+                *ngFor="let short_thread of short_threads" 
+                [short_thread]="short_thread">
+                </app-short-thread>
         </mat-tab>
 </mat-tab-group>
 

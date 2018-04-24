@@ -29,3 +29,11 @@ p:nth-child(2){
     background: rgba(168, 215, 243, 0.26);
     border-radius: 15px;
 }
+.material-icons {
+    font-size: 18px;
+}
+
+
+.thread-content{
+    width: 100%;
+}

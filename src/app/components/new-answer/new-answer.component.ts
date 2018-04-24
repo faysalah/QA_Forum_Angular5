@@ -15,8 +15,8 @@ export class NewAnswerComponent implements OnInit {
   }
 
   close() {
-    this.appService.test();
-    this.toastr.error('Not Closed', 'want to close');
+    this.appService.closeAnswerInput();
+    this.toastr.error('Answer input closed', 'want to close');
   }
 
   addAnswer() {

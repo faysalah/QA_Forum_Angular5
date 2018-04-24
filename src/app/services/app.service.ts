@@ -4,10 +4,10 @@ import { Injectable , ViewContainerRef} from '@angular/core';
 export class AppService {
 
   constructor() { }
-  vartest: ViewContainerRef;
+  answerInputRef: ViewContainerRef;
 
-  test() {
-    this.vartest.clear();
+  closeAnswerInput() {
+    this.answerInputRef.clear();
   }
 
 }
